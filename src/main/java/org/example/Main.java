@@ -1,19 +1,23 @@
-package org.example;
+public class Main{
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Entrée with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Maj+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Maj+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+    static void sort(int[] T){
+        for(int i=0;i<T.length;i++){
+            for(int j=i+1;j<T.length;j++){
+                if(T[i]>T[j]){
+                    int k =T[i];
+                    T[i]=T[j];
+                    T[j]=k;
+                }
+            }
         }
     }
+    public static void main(String[] args){
+        int[] k= {1,2,3,65,4,8,9};
+        sort(k);
+        for(int i=0;i<k.length;i++){
+            System.out.print(k[i]+" ");
+        }        
+    }
+
+
 }
